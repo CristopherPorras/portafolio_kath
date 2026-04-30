@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary Meta Tags -->
+  <title>Sofia Porras — Animation Artist</title>
+  <meta name="description" content="Animation artist specializing in character animation, motion graphics, and 2D/3D visual storytelling. Available for new opportunities.">
+  <meta name="author" content="Sofia Porras">
+  <meta name="keywords" content="animation, animator, character animation, motion graphics, 2D animation, 3D animation, portfolio, reel">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sofia Porras — Animation Artist">
+  <meta property="og:description" content="Animation artist specializing in character animation, motion graphics, and visual storytelling.">
+  <meta property="og:image" content="assets/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sofia Porras — Animation Artist">
+  <meta name="twitter:description" content="Animation artist specializing in character animation, motion graphics, and visual storytelling.">
+
+  <!-- Favicon (inline SVG data URI — works without file dependency) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%237c6af7'/><polygon points='38,30 72,50 38,70' fill='white'/></svg>">
+
+  <!-- Fonts: Inter from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Structured Data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sofia Porras",
+    "jobTitle": "Animation Artist",
+    "description": "Animation artist specializing in character animation, motion graphics, and 2D/3D visual storytelling.",
+    "email": "cristopherporras19802@gmail.com",
+    "url": "https://sofiaanima.com"
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- =============================================
+       NAVIGATION
+       ============================================= -->
+  <header>
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="Sofia Porras — Home">
+          Sofia <span>Porras</span>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="#work"    class="nav-link" aria-current="false">Work</a></li>
+          <li><a href="#about"   class="nav-link" aria-current="false">About</a></li>
+          <li><a href="#contact" class="nav-link" aria-current="false">Contact</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">Hire Me</a></li>
+        </ul>
+
+        <button class="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =============================================
+         HERO SECTION
+         ============================================= -->
+    <section id="hero" class="hero" aria-label="Introduction">
+
+      <!-- Background effects -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+
+      <div class="container hero-content">
+
+        <!-- Eyebrow / availability -->
+        <div class="hero-eyebrow">
+          <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+          <span data-hero-available>Available for work</span>
+        </div>
+
+        <!-- Main title -->
+        <h1 class="hero-title">
+          Bringing stories<br>
+          <span class="hero-title-line2" data-hero-tagline>to life through motion</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="hero-description" data-hero-bio>
+          Animation artist crafting expressive characters, motion graphics, and visual narratives that connect with audiences.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-actions">
+          <a
+            href="#work"
+            class="btn btn-primary"
+            aria-label="View animation work"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            View My Work
+          </a>
+          <a
+            href="assets/resume.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-hero-resume
+            aria-label="Download resume PDF"
+          >
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download Resume
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="hero-stats" aria-label="Quick facts">
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-hero-experience>4+</div>
+            <div class="hero-stat-label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value" data-hero-projects>6+</div>
+            <div class="hero-stat-label">Projects Completed</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-value">3</div>
+            <div class="hero-stat-label">Disciplines</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+
+    </section>
+
+    <!-- =============================================
+         WORK / PROJECTS SECTION
+         ============================================= -->
+    <section id="work" class="section" aria-label="Portfolio work">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <span class="section-label">Selected Work</span>
+          <h2 class="section-title">Animated Projects</h2>
+          <p class="section-subtitle">
+            A selection of personal projects, experiments, and passion pieces spanning character animation, motion graphics, and beyond.
+          </p>
+        </header>
+
+        <!-- Category filters — populated by projects.js -->
+        <div class="work-filters reveal" role="group" aria-label="Filter projects by category"></div>
+
+        <!-- Projects grid — populated by projects.js -->
+        <div class="projects-grid reveal-stagger" role="list" aria-label="Project grid">
+          <!-- Cards injected by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =============================================
+         ABOUT SECTION
+         ============================================= -->
+    <section id="about" class="section" aria-label="About the animator">
+      <div class="container">
+
+        <div class="about-grid">
+
+          <!-- Left: Image -->
+          <div class="about-image-wrapper reveal">
+            <div class="about-image-placeholder" role="img" aria-label="Animator portrait">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase">Add your photo</span>
+            </div>
+
+            <!-- Badge overlay -->
+            <div class="about-image-badge" aria-label="Years of experience">
+              <div class="badge-value" data-about-years>4+</div>
+              <div class="badge-label">Years of experience</div>
+            </div>
+          </div>
+
+          <!-- Right: Content -->
+          <div class="about-content">
+
+            <header class="section-header" style="margin-bottom: var(--space-6)">
+              <span class="section-label">About Me</span>
+              <h2 class="section-title reveal" data-about-name>Sofia Porras</h2>
+              <p class="section-subtitle reveal" data-about-title>Animation Artist</p>
+            </header>
+
+            <p class="about-text reveal" data-about-bio>
+              Loading bio...
+            </p>
+
+            <p class="about-text reveal" style="margin-top:var(--space-4)">
+              I believe great animation is <strong>built on observation</strong> — understanding how things move, feel weight, and communicate emotion before a single frame is drawn. My workflow blends traditional animation principles with modern digital tools.
+            </p>
+
+            <!-- Skills grid — populated by about.js -->
+            <div class="skills-grid reveal-stagger" data-about-skills aria-label="Skills and tools">
+              <!-- Skill cards injected by JavaScript -->
+            </div>
+
+            <div style="margin-top: var(--space-8);" class="reveal">
+              <a
+                href="#contact"
+                class="btn btn-primary"
+              >
+                Let's Work Together
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============================================
+         CONTACT SECTION
+         ============================================= -->
+    <section id="contact" class="section contact-section" aria-label="Contact">
+      <div class="container">
+
+        <div class="contact-grid">
+
+          <!-- Left: Info -->
+          <div class="contact-info">
+
+            <header class="section-header" style="margin-bottom: var(--space-6)">
+              <span class="section-label">Get In Touch</span>
+              <h2 class="section-title reveal">Let's create<br>something great</h2>
+            </header>
+
+            <!-- Availability -->
+            <div class="contact-availability reveal">
+              <span class="availability-dot" aria-hidden="true"></span>
+              <span data-contact-available>Available for new opportunities</span>
+            </div>
+
+            <p class="about-text reveal">
+              I'm actively looking for animation roles — full-time, part-time, or freelance. If you're working on something exciting and think I'd be a good fit, I'd love to hear about it.
+            </p>
+
+            <!-- Contact links -->
+            <div class="contact-links" role="list">
+
+              <a class="contact-link reveal" data-contact-email href="mailto:cristopherporras19802@gmail.com" aria-label="Send email">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </div>
+                <div class="contact-link-text">
+                  <div class="contact-link-label">Email</div>
+                  <div class="contact-link-value">cristopherporras19802@gmail.com</div>
+                </div>
+              </a>
+
+              <a class="contact-link reveal" data-contact-linkedin href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                  </svg>
+                </div>
+                <div class="contact-link-text">
+                  <div class="contact-link-label">LinkedIn</div>
+                  <div class="contact-link-value">Connect professionally</div>
+                </div>
+              </a>
+
+              <a class="contact-link reveal" data-contact-vimeo href="https://vimeo.com" target="_blank" rel="noopener noreferrer" aria-label="Vimeo showreel">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M23 7.286c-.1 2.177-1.617 5.158-4.55 8.946C15.44 20.1 12.927 22 10.9 22c-1.23 0-2.27-1.136-3.12-3.407L6.21 13.28C5.63 11.01 5.01 9.876 4.347 9.876c-.143 0-.644.302-1.5.904L2 9.721c.944-.83 1.875-1.66 2.79-2.49C6.025 6.167 6.948 5.59 7.58 5.53c1.56-.15 2.52.917 2.882 3.2.39 2.46.66 3.99.81 4.59.45 2.04.944 3.06 1.484 3.06.42 0 1.05-.664 1.89-1.99.84-1.327 1.29-2.337 1.35-3.03.12-1.147-.33-1.72-1.35-1.72-.48 0-.976.11-1.486.33 1.188-3.95 3.452-5.87 6.79-5.76 2.48.08 3.65 1.68 3.51 4.08z"/>
+                  </svg>
+                </div>
+                <div class="contact-link-text">
+                  <div class="contact-link-label">Vimeo</div>
+                  <div class="contact-link-value">Watch my showreel</div>
+                </div>
+              </a>
+
+              <a class="contact-link reveal" data-contact-artstation href="https://artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation portfolio">
+                <div class="contact-link-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.164-1.333H9.419L21.598 22.54l1.92-3.325A2.44 2.44 0 0 0 24 17.748zm-15.53-5.598L12.619 4.9l4.149 7.25H8.47z"/>
+                  </svg>
+                </div>
+                <div class="contact-link-text">
+                  <div class="contact-link-label">ArtStation</div>
+                  <div class="contact-link-value">View full portfolio</div>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form-wrapper reveal">
+            <form class="contact-form" novalidate aria-label="Contact form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Name *</label>
+                  <input
+                    id="contact-name"
+                    class="form-input"
+                    type="text"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                    autocomplete="name"
+                  >
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email *</label>
+                  <input
+                    id="contact-email"
+                    class="form-input"
+                    type="email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <input
+                  id="contact-subject"
+                  class="form-input"
+                  type="text"
+                  name="subject"
+                  placeholder="What's this about?"
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message *</label>
+                <textarea
+                  id="contact-message"
+                  class="form-textarea"
+                  name="message"
+                  placeholder="Tell me about the project, role, or opportunity..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-status" role="alert" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-logo">
+        Sofia <span>Porras</span>
+      </div>
+
+      <p class="footer-copy">
+        &copy; <span id="footer-year">2024</span> Sofia Porras. All rights reserved.
+      </p>
+
+      <div class="footer-social" aria-label="Social links">
+
+        <a class="footer-social-link" data-contact-linkedin href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+
+        <a class="footer-social-link" data-contact-vimeo href="https://vimeo.com" target="_blank" rel="noopener noreferrer" aria-label="Vimeo">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23 7.286c-.1 2.177-1.617 5.158-4.55 8.946C15.44 20.1 12.927 22 10.9 22c-1.23 0-2.27-1.136-3.12-3.407L6.21 13.28C5.63 11.01 5.01 9.876 4.347 9.876c-.143 0-.644.302-1.5.904L2 9.721c.944-.83 1.875-1.66 2.79-2.49C6.025 6.167 6.948 5.59 7.58 5.53c1.56-.15 2.52.917 2.882 3.2.39 2.46.66 3.99.81 4.59.45 2.04.944 3.06 1.484 3.06.42 0 1.05-.664 1.89-1.99.84-1.327 1.29-2.337 1.35-3.03.12-1.147-.33-1.72-1.35-1.72-.48 0-.976.11-1.486.33 1.188-3.95 3.452-5.87 6.79-5.76 2.48.08 3.65 1.68 3.51 4.08z"/>
+          </svg>
+        </a>
+
+        <a class="footer-social-link" data-contact-instagram href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+
+        <a class="footer-social-link" data-contact-artstation href="https://artstation.com" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24 .025c0-.484-.143-.935-.388-1.314L15.728 2.728a2.424 2.424 0 0 0-2.164-1.333H9.419L21.598 22.54l1.92-3.325A2.44 2.44 0 0 0 24 17.748zm-15.53-5.598L12.619 4.9l4.149 7.25H8.47z"/>
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- =============================================
+       PROJECT MODAL
+       ============================================= -->
+  <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title-text" aria-hidden="true">
+    <div class="modal">
+
+      <header class="modal-header">
+        <div>
+          <h2 class="modal-title" id="modal-title-text"></h2>
+          <p class="modal-subtitle"></p>
+        </div>
+        <button class="modal-close" aria-label="Close project detail">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="modal-media" aria-label="Project media"></div>
+
+      <div class="modal-body">
+        <p class="modal-description"></p>
+
+        <div class="modal-details">
+          <div class="modal-detail">
+            <span class="modal-detail-label">Client</span>
+            <span class="modal-detail-value" data-modal-client></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Year</span>
+            <span class="modal-detail-value" data-modal-year></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Duration</span>
+            <span class="modal-detail-value" data-modal-duration></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Tools</span>
+            <span class="modal-detail-value" data-modal-tools></span>
+          </div>
+          <div class="modal-detail">
+            <span class="modal-detail-label">Category</span>
+            <span class="modal-detail-value" data-modal-categories></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer year auto-update -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+    // Sync modal aria-hidden with open state
+    const overlay = document.querySelector('.modal-overlay');
+    const obs = new MutationObserver(() => {
+      overlay.setAttribute('aria-hidden', overlay.classList.contains('open') ? 'false' : 'true');
+    });
+    obs.observe(overlay, { attributes: true, attributeFilter: ['class'] });
+  </script>
+
+  <!-- Main module (ES Modules — works in all modern browsers) -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
