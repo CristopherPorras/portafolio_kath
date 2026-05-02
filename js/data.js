@@ -16,12 +16,34 @@ const DataLoader = (() => {
   async function load() {
     if (_data) return _data;
     try {
-      const response = await fetch('data/projects.json');
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      _data = await response.json();
+      // Perfil y categorías siempre vienen del JSON estático
+      const staticRes = await fetch('data/projects.json');
+      if (!staticRes.ok) throw new Error(`HTTP ${staticRes.status}`);
+      const staticData = await staticRes.json();
+
+      // Proyectos: intenta Vimeo API, si falla usa el JSON
+      let projects = staticData.projects || [];
+      try {
+        const vimeoRes = await fetch('/api/videos');
+        if (vimeoRes.ok) {
+          const vimeoData = await vimeoRes.json();
+          if (Array.isArray(vimeoData.projects) && vimeoData.projects.length > 0) {
+            projects = vimeoData.projects;
+          }
+        }
+      } catch (_) {
+        // Sin Vimeo token o en desarrollo local → usa projects.json
+      }
+
+      _data = {
+        animator:   staticData.animator   || {},
+        categories: staticData.categories || [],
+        projects
+      };
+
       return _data;
     } catch (err) {
-      console.error('[DataLoader] Failed to load projects.json:', err);
+      console.error('[DataLoader] Failed to load portfolio data:', err);
       throw err;
     }
   }
