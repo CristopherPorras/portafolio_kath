@@ -14,7 +14,6 @@ const About = (() => {
       const animator = DataLoader.getAnimator();
       _renderBio(animator);
       _renderSkills(animator.skills);
-      _renderBadge(animator);
     } catch (err) {
       console.warn('[About] Render failed:', err);
     }
@@ -32,11 +31,6 @@ const About = (() => {
 
     const locationEl = document.querySelector('[data-about-location]');
     if (locationEl) locationEl.textContent = animator.location;
-  }
-
-  function _renderBadge(animator) {
-    const badgeValue = document.querySelector('[data-about-years]');
-    if (badgeValue) badgeValue.textContent = `${animator.experience_years}+`;
   }
 
   function _renderSkills(skills) {

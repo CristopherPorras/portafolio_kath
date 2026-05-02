@@ -93,16 +93,18 @@ const Modal = (() => {
     const { type, url } = project.media;
 
     if (type === 'video') {
-      // Support Vimeo player URLs
+      // Support Vimeo — convert any vimeo.com URL to embed URL
       if (url.includes('vimeo')) {
-        const src = url.includes('?') ? url + '&autoplay=1' : url + '?autoplay=1';
-        return `<iframe
-          src="${_escapeHtml(src)}"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
-          title="${_escapeHtml(project.title)}"
-        ></iframe>`;
+        const vimeoId = url.match(/vimeo\.com\/(?:video\/)?(\d+)/)?.[1];
+        if (vimeoId) {
+          return `<iframe
+            src="https://player.vimeo.com/video/${vimeoId}?autoplay=1&color=b07280&title=0&byline=0&portrait=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="${_escapeHtml(project.title)}"
+          ></iframe>`;
+        }
       }
       // Support YouTube embed URLs
       if (url.includes('youtube') || url.includes('youtu.be')) {

@@ -59,6 +59,7 @@ body {
 }
 
 .section-title {
+  font-family: var(--font-display);
   font-size: var(--text-4xl);
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-tight);
@@ -264,15 +265,15 @@ body {
 .hero-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15;
+  filter: blur(100px);
+  opacity: 0.35;
   animation: orb-drift 12s ease-in-out infinite alternate;
 }
 
 .hero-orb-1 {
   width: 600px;
   height: 600px;
-  background: var(--color-accent);
+  background: #e8c5cc;
   top: -200px;
   right: -100px;
   animation-delay: 0s;
@@ -281,7 +282,7 @@ body {
 .hero-orb-2 {
   width: 400px;
   height: 400px;
-  background: var(--color-secondary);
+  background: #e8d5c0;
   bottom: -100px;
   left: -100px;
   animation-delay: -4s;
@@ -290,11 +291,11 @@ body {
 .hero-orb-3 {
   width: 300px;
   height: 300px;
-  background: var(--color-accent-light);
+  background: #dcc5cc;
   top: 40%;
   left: 40%;
   animation-delay: -8s;
-  opacity: 0.08;
+  opacity: 0.25;
 }
 
 @keyframes orb-drift {
@@ -302,15 +303,7 @@ body {
   to   { transform: translate(30px, -30px) scale(1.1); }
 }
 
-/* Grid texture overlay */
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 48px 48px;
-}
+/* Sin grid de fondo en tema claro — se eliminó para mejor legibilidad */
 
 .hero-content {
   position: relative;
@@ -345,10 +338,11 @@ body {
 }
 
 .hero-title {
+  font-family: var(--font-display);
   font-size: clamp(var(--text-5xl), 8vw, var(--text-7xl));
-  font-weight: var(--weight-black);
+  font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-tight);
-  line-height: 1.0;
+  line-height: 1.05;
   margin-bottom: var(--space-6);
   opacity: 0;
   animation: fade-up 0.8s ease forwards 0.4s;
@@ -1150,7 +1144,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(30, 20, 18, 0.6);
   backdrop-filter: blur(8px);
   z-index: var(--z-modal);
   display: flex;
@@ -1330,7 +1324,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-bg);
+  background: var(--color-bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -1339,7 +1333,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-dark);
+  background: var(--color-accent);
 }
 
 /* ============================================

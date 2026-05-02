@@ -1,11 +1,11 @@
 {
   "animator": {
-    "name": "Sofia Porras",
-    "title": "Animation Artist",
-    "tagline": "Bringing stories to life through motion",
-    "bio": "I'm a passionate animation artist with a strong focus on character animation, motion graphics, and visual storytelling. I specialize in creating fluid, expressive animations that connect emotionally with audiences. With experience across 2D and 3D workflows, I bring both technical precision and artistic vision to every project.",
-    "email": "cristopherporras19802@gmail.com",
-    "location": "Available for remote & on-site roles",
+    "name": "Sara Porras",
+    "title": "Artista Animadora",
+    "tagline": "Dando vida a historias a través del movimiento",
+    "bio": "Soy una artista animadora apasionada con un fuerte enfoque en animación de personajes, motion graphics y narrativa visual. Me especializo en crear animaciones fluidas y expresivas que conectan emocionalmente con las audiencias. Con una sólida base en flujos de trabajo 2D, aporto tanto precisión técnica como visión artística a cada proyecto.",
+    "email": "Prueba@gmail.com",
+    "location": "Disponible para roles remotos y presenciales",
     "resume": "assets/resume.pdf",
     "social": {
       "linkedin": "https://linkedin.com",
@@ -14,130 +14,150 @@
       "artstation": "https://artstation.com"
     },
     "skills": [
-      { "category": "2D Animation", "tools": ["Adobe Animate", "Toon Boom Harmony", "TVPaint"] },
-      { "category": "3D Animation", "tools": ["Maya", "Blender", "Cinema 4D"] },
-      { "category": "Motion Graphics", "tools": ["After Effects", "Adobe Premiere", "DaVinci Resolve"] },
-      { "category": "Design", "tools": ["Photoshop", "Illustrator", "Procreate"] }
+      {
+        "category": "Animación 2D",
+        "tools": [
+          "Adobe Animate",
+          "Toon Boom Harmony",
+          "TVPaint"
+        ]
+      },
+      {
+        "category": "Motion Graphics",
+        "tools": [
+          "After Effects",
+          "Adobe Premiere",
+          "DaVinci Resolve"
+        ]
+      },
+      {
+        "category": "Diseño",
+        "tools": [
+          "Photoshop",
+          "Illustrator",
+          "Procreate"
+        ]
+      }
     ],
-    "experience_years": 4,
-    "available": true
+    "available": true,
+    "experience_years": 0
   },
   "categories": [
-    { "id": "all", "label": "All Work" },
-    { "id": "character", "label": "Character Animation" },
-    { "id": "motion", "label": "Motion Graphics" },
-    { "id": "2d", "label": "2D Animation" },
-    { "id": "3d", "label": "3D Animation" },
-    { "id": "experimental", "label": "Experimental" }
+    {
+      "id": "all",
+      "label": "Todo el trabajo"
+    },
+    {
+      "id": "character",
+      "label": "Animación de Personajes"
+    },
+    {
+      "id": "motion",
+      "label": "Motion Graphics"
+    },
+    {
+      "id": "2d",
+      "label": "Animación 2D"
+    },
+    {
+      "id": "experimental",
+      "label": "Experimental"
+    }
   ],
   "projects": [
     {
       "id": "proj-001",
-      "title": "The Wanderer",
-      "category": ["character", "2d"],
+      "title": "La Viajera",
+      "category": [
+        "character",
+        "2d"
+      ],
       "year": 2024,
-      "description": "A short character animation exploring the emotional journey of a lone traveler. Created entirely in Toon Boom Harmony with hand-drawn backgrounds.",
-      "shortDescription": "Character animation short — 2D hand-drawn",
-      "thumbnail": "assets/projects/wanderer-thumb.jpg",
+      "description": "Una animación corta de personaje que explora el viaje emocional de una viajera solitaria. Creada íntegramente en Toon Boom Harmony con fondos dibujados a mano.",
+      "shortDescription": "Cortometraje de personaje — 2D dibujado a mano",
+      "thumbnail": "/assets/projects/1777581025038-ced6cfca.jpg",
       "media": {
-        "type": "video",
-        "url": "https://player.vimeo.com/video/000000001",
-        "poster": "assets/projects/wanderer-poster.jpg"
+        "type": "image",
+        "url": "/assets/projects/1777581031126-dbeeb657.jpg"
       },
-      "tools": ["Toon Boom Harmony", "Photoshop"],
+      "tools": [
+        "Toon Boom Harmony",
+        "Photoshop"
+      ],
       "featured": true,
-      "client": "Personal Project",
-      "duration": "1:45 min"
+      "client": "Proyecto Personal",
+      "duration": "Na"
     },
     {
       "id": "proj-002",
-      "title": "Pulse — Brand Identity Motion",
-      "category": ["motion"],
+      "title": "Pulso — Identidad en Movimiento",
+      "category": [
+        "motion"
+      ],
       "year": 2024,
-      "description": "Motion graphics package for a fictional tech brand. Includes logo animation, lower thirds, and full broadcast package designed in After Effects.",
-      "shortDescription": "Full motion graphics broadcast package",
-      "thumbnail": "assets/projects/pulse-thumb.jpg",
+      "description": "Paquete de motion graphics para una marca tecnológica ficticia. Incluye animación de logo, lower thirds y paquete completo de transmisión diseñado en After Effects.",
+      "shortDescription": "Paquete completo de motion graphics para transmisión",
+      "thumbnail": "",
       "media": {
         "type": "video",
         "url": "https://player.vimeo.com/video/000000002",
-        "poster": "assets/projects/pulse-poster.jpg"
+        "poster": ""
       },
-      "tools": ["After Effects", "Illustrator", "Cinema 4D"],
+      "tools": [
+        "After Effects",
+        "Illustrator"
+      ],
       "featured": true,
-      "client": "Concept Project",
+      "client": "Proyecto Conceptual",
       "duration": "0:30 min"
     },
     {
-      "id": "proj-003",
-      "title": "Fracture",
-      "category": ["3d", "experimental"],
-      "year": 2023,
-      "description": "An experimental 3D animation exploring geometric abstraction and rhythm. Rendered in Blender with custom shaders and procedural textures.",
-      "shortDescription": "3D experimental — procedural geometry & rhythm",
-      "thumbnail": "assets/projects/fracture-thumb.jpg",
-      "media": {
-        "type": "video",
-        "url": "https://player.vimeo.com/video/000000003",
-        "poster": "assets/projects/fracture-poster.jpg"
-      },
-      "tools": ["Blender", "DaVinci Resolve"],
-      "featured": true,
-      "client": "Personal Project",
-      "duration": "2:10 min"
-    },
-    {
       "id": "proj-004",
-      "title": "Little Fox — Children's Series Pilot",
-      "category": ["character", "2d"],
+      "title": "Pequeña Zorra — Piloto de Serie Infantil",
+      "category": [
+        "character",
+        "2d"
+      ],
       "year": 2023,
-      "description": "Pilot episode animation for an original children's series. Developed character rigs, animation cycles, and lip sync for a 5-minute pilot.",
-      "shortDescription": "Children's series pilot — character rigging & animation",
-      "thumbnail": "assets/projects/littlefox-thumb.jpg",
+      "description": "Animación del episodio piloto de una serie infantil original. Desarrollo de rigs de personajes, ciclos de animación y sincronización de labios para un piloto de 5 minutos.",
+      "shortDescription": "Piloto de serie infantil — rigging y animación de personajes",
+      "thumbnail": "/assets/projects/1777581199817-b65214df.png",
       "media": {
-        "type": "video",
-        "url": "https://player.vimeo.com/video/000000004",
-        "poster": "assets/projects/littlefox-poster.jpg"
+        "type": "image",
+        "url": "/assets/projects/1777581212452-1a982980.png"
       },
-      "tools": ["Adobe Animate", "After Effects", "Audition"],
-      "featured": false,
-      "client": "Personal Project",
+      "tools": [
+        "Adobe Animate",
+        "After Effects",
+        "Audition"
+      ],
+      "featured": true,
+      "client": "Proyecto Personal",
       "duration": "4:58 min"
     },
     {
       "id": "proj-005",
-      "title": "Kinetic Typography — Music Visualizer",
-      "category": ["motion", "experimental"],
+      "title": "Tipografía Cinética — Visualizador Musical",
+      "category": [
+        "motion",
+        "experimental"
+      ],
       "year": 2023,
-      "description": "A kinetic typography piece synchronized to an original music track. Letters, words, and phrases dance in perfect sync with the beat and emotion of the music.",
-      "shortDescription": "Kinetic typography synchronized to music",
-      "thumbnail": "assets/projects/kinetic-thumb.jpg",
+      "description": "Una pieza de tipografía cinética sincronizada con una pista musical original. Letras, palabras y frases danzan en perfecta sincronía con el ritmo y la emoción de la música.",
+      "shortDescription": "Tipografía cinética sincronizada con música",
+      "thumbnail": "",
       "media": {
         "type": "video",
         "url": "https://player.vimeo.com/video/000000005",
-        "poster": "assets/projects/kinetic-poster.jpg"
+        "poster": ""
       },
-      "tools": ["After Effects", "Premiere Pro"],
+      "tools": [
+        "After Effects",
+        "Premiere Pro"
+      ],
       "featured": false,
-      "client": "Personal Project",
+      "client": "Proyecto Personal",
       "duration": "3:20 min"
-    },
-    {
-      "id": "proj-006",
-      "title": "Gravity",
-      "category": ["3d", "character"],
-      "year": 2022,
-      "description": "A 3D character animation study focusing on weight, balance and secondary motion. The character navigates a surreal low-gravity environment.",
-      "shortDescription": "3D character study — weight & secondary motion",
-      "thumbnail": "assets/projects/gravity-thumb.jpg",
-      "media": {
-        "type": "video",
-        "url": "https://player.vimeo.com/video/000000006",
-        "poster": "assets/projects/gravity-poster.jpg"
-      },
-      "tools": ["Maya", "Arnold Renderer", "Photoshop"],
-      "featured": false,
-      "client": "Academy Project",
-      "duration": "1:15 min"
     }
   ]
 }

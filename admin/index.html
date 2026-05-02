@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Admin — Sara Porras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       PANTALLA DE LOGIN
+  ══════════════════════════════════════════ -->
+  <div id="login-screen" class="login-screen">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="login-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <h1>Panel de Administración</h1>
+        <p>Sara Porras</p>
+      </div>
+      <div id="wrong-port-warning" class="login-error" hidden>
+        ⚠ Estás en el puerto incorrecto. Abre <strong>http://localhost:3000/admin</strong> — no uses Live Server.
+      </div>
+
+      <form id="login-form">
+        <div class="field">
+          <label for="password-input">Contraseña</label>
+          <input id="password-input" type="password" placeholder="Ingresa tu contraseña" autocomplete="current-password" required>
+        </div>
+        <div id="login-error" class="login-error" hidden></div>
+        <button type="submit" class="btn-primary" id="login-btn">
+          <span>Entrar al panel</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       APLICACIÓN PRINCIPAL
+  ══════════════════════════════════════════ -->
+  <div id="app" class="app" hidden>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="sidebar-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+        <div>
+          <div class="sidebar-logo-name">Sara Porras</div>
+          <div class="sidebar-logo-sub">Administración</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="sidebar-link active" data-section="projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Proyectos
+        </button>
+        <button class="sidebar-link" data-section="profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Mi Perfil
+        </button>
+        <button class="sidebar-link" data-section="files">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Archivos
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="/" target="_blank" class="sidebar-view-site">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Ver portafolio
+        </a>
+        <button class="sidebar-logout" id="logout-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Cerrar sesión
+        </button>
+      </div>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+
+      <!-- ── SECCIÓN: PROYECTOS ── -->
+      <section id="section-projects" class="section active">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Proyectos</h2>
+            <p class="section-subtitle" id="projects-count">Cargando...</p>
+          </div>
+          <button class="btn-primary" id="btn-new-project">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Nuevo proyecto
+          </button>
+        </div>
+
+        <div id="projects-list" class="projects-list">
+          <div class="loading">Cargando proyectos...</div>
+        </div>
+      </section>
+
+      <!-- ── SECCIÓN: FORMULARIO PROYECTO ── -->
+      <section id="section-project-form" class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title" id="form-title">Nuevo Proyecto</h2>
+            <p class="section-subtitle">Completa los detalles del proyecto</p>
+          </div>
+          <button class="btn-ghost" id="btn-cancel-form">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Volver
+          </button>
+        </div>
+
+        <form id="project-form" class="form-card">
+          <input type="hidden" id="field-id">
+
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="field-title">Título *</label>
+              <input id="field-title" type="text" placeholder="Nombre del proyecto" required>
+            </div>
+            <div class="field">
+              <label for="field-year">Año *</label>
+              <input id="field-year" type="number" placeholder="2024" min="2000" max="2099" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="field-short-desc">Descripción corta *</label>
+            <input id="field-short-desc" type="text" placeholder="Ej: Cortometraje de personaje — 2D dibujado a mano">
+          </div>
+
+          <div class="field">
+            <label for="field-desc">Descripción completa *</label>
+            <textarea id="field-desc" rows="4" placeholder="Describe el proyecto con detalle: proceso, objetivo, técnica..." required></textarea>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="field-client">Cliente / Tipo</label>
+              <input id="field-client" type="text" placeholder="Proyecto Personal / Cliente / Academia">
+            </div>
+            <div class="field">
+              <label for="field-duration">Duración</label>
+              <input id="field-duration" type="text" placeholder="Ej: 2:30 min">
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Categorías *</label>
+            <div class="checkboxes">
+              <label class="checkbox-label"><input type="checkbox" name="category" value="character"> Animación de personajes</label>
+              <label class="checkbox-label"><input type="checkbox" name="category" value="motion"> Motion Graphics</label>
+              <label class="checkbox-label"><input type="checkbox" name="category" value="2d"> Animación 2D</label>
+              <label class="checkbox-label"><input type="checkbox" name="category" value="3d"> Animación 3D</label>
+              <label class="checkbox-label"><input type="checkbox" name="category" value="experimental"> Experimental</label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="field-tools">Herramientas (separadas por coma)</label>
+            <input id="field-tools" type="text" placeholder="Ej: Blender, After Effects, Photoshop">
+          </div>
+
+          <!-- Thumbnail -->
+          <div class="field">
+            <label>Imagen miniatura (thumbnail)</label>
+            <div class="upload-zone" id="thumb-upload-zone">
+              <input type="file" id="thumb-file" accept="image/*" class="upload-input">
+              <div class="upload-placeholder" id="thumb-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                <span>Haz clic o arrastra una imagen aquí</span>
+                <small>JPG, PNG, WEBP — máx. 200 MB</small>
+              </div>
+              <img id="thumb-preview" class="upload-preview" hidden>
+              <button type="button" class="upload-clear" id="thumb-clear" hidden>✕ Quitar imagen</button>
+            </div>
+            <div class="field-or">— o pega una URL —</div>
+            <input id="field-thumbnail" type="text" placeholder="https://... o /assets/projects/imagen.jpg">
+          </div>
+
+          <!-- Media del proyecto -->
+          <div class="field">
+            <label for="field-media-type">Tipo de media del proyecto</label>
+            <select id="field-media-type">
+              <option value="video">Video (Vimeo / YouTube)</option>
+              <option value="image">Imagen</option>
+            </select>
+          </div>
+
+          <div id="media-video-section" class="field">
+            <label for="field-media-url">URL del video</label>
+            <input id="field-media-url" type="text" placeholder="https://vimeo.com/123456789">
+            <small class="field-hint">
+              <strong>Vimeo:</strong> pega la URL normal del video (ej: https://vimeo.com/123456789) — se convierte automáticamente.<br>
+              <strong>YouTube:</strong> pega la URL normal (ej: https://youtu.be/abc o https://youtube.com/watch?v=abc).
+            </small>
+          </div>
+
+          <div id="media-image-section" class="field" hidden>
+            <label>Imagen del proyecto</label>
+            <div class="upload-zone" id="media-upload-zone">
+              <input type="file" id="media-file" accept="image/*,video/*" class="upload-input">
+              <div class="upload-placeholder" id="media-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <span>Haz clic o arrastra un archivo aquí</span>
+                <small>Imágenes o videos — máx. 200 MB</small>
+              </div>
+              <img id="media-preview" class="upload-preview" hidden>
+              <button type="button" class="upload-clear" id="media-clear" hidden>✕ Quitar archivo</button>
+            </div>
+            <div class="field-or">— o pega una URL —</div>
+            <input id="field-media-image-url" type="text" placeholder="/assets/projects/archivo.jpg">
+          </div>
+
+          <div class="field">
+            <label class="checkbox-label featured-check">
+              <input type="checkbox" id="field-featured">
+              <span>Proyecto destacado (ocupa más espacio en el portafolio)</span>
+            </label>
+          </div>
+
+          <div id="form-error" class="form-error" hidden></div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-ghost" id="btn-cancel-form-2">Cancelar</button>
+            <button type="submit" class="btn-primary" id="btn-save-project">
+              <span>Guardar proyecto</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ── SECCIÓN: PERFIL ── -->
+      <section id="section-profile" class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Mi Perfil</h2>
+            <p class="section-subtitle">Información que aparece en el portafolio</p>
+          </div>
+        </div>
+
+        <form id="profile-form" class="form-card">
+
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="p-name">Nombre completo</label>
+              <input id="p-name" type="text" placeholder="Sara Porras">
+            </div>
+            <div class="field">
+              <label for="p-title">Título profesional</label>
+              <input id="p-title" type="text" placeholder="Artista Animadora">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="p-tagline">Frase principal (tagline)</label>
+            <input id="p-tagline" type="text" placeholder="Dando vida a historias a través del movimiento">
+          </div>
+
+          <div class="field">
+            <label for="p-bio">Biografía</label>
+            <textarea id="p-bio" rows="5" placeholder="Cuéntale a los empleadores quién eres..."></textarea>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="p-email">Correo de contacto</label>
+              <input id="p-email" type="email" placeholder="tucorreo@email.com">
+            </div>
+            <div class="field">
+              <label for="p-location">Ubicación / disponibilidad</label>
+              <input id="p-location" type="text" placeholder="Disponible para roles remotos y presenciales">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="field">
+              <label for="p-experience">Años de experiencia</label>
+              <input id="p-experience" type="number" min="0" placeholder="4">
+            </div>
+            <div class="field">
+              <label for="p-available">Disponibilidad</label>
+              <select id="p-available">
+                <option value="true">Disponible para trabajar</option>
+                <option value="false">No disponible actualmente</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="field-group">
+            <legend>Redes sociales</legend>
+            <div class="form-grid-2">
+              <div class="field">
+                <label for="p-linkedin">LinkedIn (URL)</label>
+                <input id="p-linkedin" type="url" placeholder="https://linkedin.com/in/tu-perfil">
+              </div>
+              <div class="field">
+                <label for="p-vimeo">Vimeo (URL)</label>
+                <input id="p-vimeo" type="url" placeholder="https://vimeo.com/tu-usuario">
+              </div>
+              <div class="field">
+                <label for="p-instagram">Instagram (URL)</label>
+                <input id="p-instagram" type="url" placeholder="https://instagram.com/tu-usuario">
+              </div>
+              <div class="field">
+                <label for="p-artstation">ArtStation (URL)</label>
+                <input id="p-artstation" type="url" placeholder="https://artstation.com/tu-usuario">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="field-group" id="skills-section">
+            <legend>Habilidades y herramientas</legend>
+            <div id="skills-list"></div>
+            <button type="button" class="btn-ghost btn-sm" id="btn-add-skill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Agregar categoría de habilidades
+            </button>
+          </fieldset>
+
+          <div id="profile-msg" class="form-success" hidden></div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary" id="btn-save-profile">
+              <span>Guardar perfil</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ── SECCIÓN: ARCHIVOS ── -->
+      <section id="section-files" class="section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Archivos Subidos</h2>
+            <p class="section-subtitle" id="files-count">Cargando...</p>
+          </div>
+          <label class="btn-primary" id="btn-upload-file-label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Subir archivo
+            <input type="file" id="global-file-input" multiple accept="image/*,video/*" class="upload-input">
+          </label>
+        </div>
+
+        <div id="upload-progress" class="upload-progress" hidden>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+          <span id="progress-text">Subiendo...</span>
+        </div>
+
+        <div id="files-grid" class="files-grid">
+          <div class="loading">Cargando archivos...</div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Toast de notificaciones -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

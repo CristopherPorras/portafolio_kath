@@ -22,6 +22,19 @@ desktop.ini
 # *.mov
 # *.avi
 
-# Node (not used in this project, but just in case)
+# Node
 node_modules/
 package-lock.json
+
+# Sensible / local
+pass.txt
+.env
+.env.*
+
+# Base de datos SQLite (se regenera desde projects.json al arrancar)
+data/portfolio.db
+data/portfolio.db-shm
+data/portfolio.db-wal
+
+# Claude Code interno
+.claude/

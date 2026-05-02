@@ -20,17 +20,15 @@ const Hero = (() => {
 
   function _render(animator) {
     _setText('[data-hero-name]', animator.name);
-    _setText('[data-hero-tagline]', animator.tagline);
     _setText('[data-hero-bio]', animator.bio);
-    _setText('[data-hero-experience]', `${animator.experience_years}+`);
     _setText('[data-hero-projects]', `${DataLoader.getProjects().length}+`);
 
-    // Availability badge
+    // Disponibilidad
     const availEl = document.querySelector('[data-hero-available]');
     if (availEl) {
-      availEl.textContent = animator.available ? 'Available for work' : 'Currently unavailable';
+      availEl.textContent = animator.available ? 'Disponible para trabajar' : 'No disponible actualmente';
       availEl.style.color = animator.available
-        ? 'var(--color-success)'
+        ? 'var(--color-accent)'
         : 'var(--color-text-muted)';
     }
 
